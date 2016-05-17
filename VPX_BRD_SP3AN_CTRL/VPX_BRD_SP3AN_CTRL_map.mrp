@@ -1,0 +1,1188 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'VPX_BRD_SP3AN_CTRL'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off
+-ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off
+-power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd
+VPX_BRD_SP3AN_CTRL.pcf 
+Target Device  : xc3s400an
+Target Package : fgg400
+Target Speed   : -5
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Sun Jul 05 15:56:06 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  193
+Logic Utilization:
+  Total Number Slice Registers:       1,494 out of   7,168   20%
+    Number used as Flip Flops:        1,477
+    Number used as Latches:              17
+  Number of 4 input LUTs:             1,622 out of   7,168   22%
+Logic Distribution:
+  Number of occupied Slices:          1,755 out of   3,584   48%
+    Number of Slices containing only related logic:   1,755 out of   1,755 100%
+    Number of Slices containing unrelated logic:          0 out of   1,755   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,829 out of   7,168   25%
+    Number used as logic:             1,282
+    Number used as a route-thru:        207
+    Number used as Shift registers:     340
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                176 out of     311   56%
+  Number of BUFGMUXs:                     7 out of      24   29%
+  Number of DCMs:                         2 out of       4   50%
+  Number of BSCANs:                       1 out of       1  100%
+  Number of BSCAN_SPARTAN3As:             1 out of       1  100%
+  Number of RAMB16BWEs:                  12 out of      20   60%
+
+  Number of RPM macros:           12
+Average Fanout of Non-Clock Nets:                3.01
+
+Peak Memory Usage:  467 MB
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   12 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net icon_control0<13> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB4> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB5> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB6> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB7> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB8> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB9> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB10> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB11> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB12> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB13> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB14> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB15> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s16_if.ram_rt1_s1_s16_i>:<RAMB16BWE_RAMB16BWE>.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network N36 has no load.
+INFO:LIT:395 - The above info message is repeated 53 more times for the
+   following (max. 5 shown):
+   N37,
+   N38,
+   N39,
+   N40,
+   N41
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  45 block(s) removed
+ 232 block(s) optimized away
+  31 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "icon_control0<10>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+  The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<6>" is loadless and has been
+removed.
+   Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+The signal "icon_control0<11>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+  The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<7>" is loadless and has been
+removed.
+   Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+The signal "icon_control0<15>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE" (ROM)
+removed.
+  The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<11>" is loadless and has been
+removed.
+   Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+The signal "icon_control0<21>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM)
+removed.
+The signal "icon_control0<16>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE" (ROM)
+removed.
+  The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<12>" is loadless and has been
+removed.
+   Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+The signal "icon_control0<22>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM)
+removed.
+The signal "icon_control0<17>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE" (ROM)
+removed.
+  The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<13>" is loadless and has been
+removed.
+   Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+The signal "icon_control0<23>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
+removed.
+  The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<3>" is loadless and has been
+removed.
+   Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+The signal "icon_control0<18>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE" (ROM)
+removed.
+  The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<14>" is loadless and has been
+removed.
+   Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+The signal "icon_control0<24>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM)
+removed.
+The signal "icon_control0<30>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+The signal "icon_control0<25>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM)
+removed.
+The signal "icon_control0<31>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE" (ROM)
+removed.
+The signal "icon_control0<26>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+The signal "icon_control0<32>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE" (ROM)
+removed.
+The signal "icon_control0<7>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM)
+removed.
+The signal "icon_control0<27>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+The signal "icon_control0<33>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE" (ROM)
+removed.
+The signal "icon_control0<28>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM)
+removed.
+The signal "icon_control0<34>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE" (ROM)
+removed.
+The signal "icon_control0<29>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM)
+removed.
+The signal "icon_control0<35>" is loadless and has been removed.
+ Loadless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "U_ila_pro_0/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B"
+(ROM) removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "DSPA_UCD9222_RST_OBUF" is unused and has been removed.
+The signal "SW_QFG_0_OBUF" is unused and has been removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		U_icon_pro/XST_GND
+VCC 		U_icon_pro/XST_VCC
+LUT4 		U_ila_pro_0/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[149].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[156].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[22].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[24].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[33].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[34].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[47].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/F_TW[96].U_TREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[149].U_IREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[156].U_IREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[22].U_IREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[24].U_IREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[33].U_IREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[34].U_IREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[47].U_IREG
+   optimized to 1
+FDPE
+		U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/
+I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[96].U_IREG
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[149].U_TQ
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[156].U_TQ
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[22].U_TQ
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[24].U_TQ
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[33].U_TQ
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[34].U_TQ
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[47].U_TQ
+   optimized to 1
+FDP 		U_ila_pro_0/U0/I_TQ0.G_TW[96].U_TQ
+   optimized to 1
+GND 		U_ila_pro_0/XST_GND
+VCC 		U_ila_pro_0/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_CLK_DCM/XST_GND
+GND 		Inst_vpx_brd_ctrl_core/Inst_ad9516_a/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_ad9516_a/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_ad9516_b/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_ad9516_b/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_debouncer_1/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_debouncer_1/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_debouncer_2/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_debouncer_2/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_debouncer_3/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_debouncer_3/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_debouncer_4/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_debouncer_4/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_i_reset/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_i_reset/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_a/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_a/XST_VCC
+GND 		Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/XST_GND
+VCC 		Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/XST_VCC
+GND 		Inst_vpx_brd_ctrl_pad/XST_GND
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
+|                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| AD9516_1_CLOCK_RESET               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_1_CS                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_1_LD                        | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| AD9516_1_PD                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_1_REFSEL                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_1_SCLK                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_1_SDI                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_2_CLOCK_RESET               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_2_CS                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_2_LD                        | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| AD9516_2_PD                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_2_REFSEL                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_2_SCLK                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| AD9516_2_SDI                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CVDD_A_EN                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CVDD_A_PG                          | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| CVDD_B_EN                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| CVDD_B_PG                          | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_BOOTCOMPLETE                  | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_CORESEL<0>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_CORESEL<1>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_CORESEL<2>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_CORESEL<3>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_DEBUG_LED<0>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_DEBUG_LED<1>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_DEBUG_LED<2>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_DEBUG_LED<3>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_EEPROM_WP                     | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<0>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<1>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<2>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<3>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<4>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<5>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<6>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<7>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<8>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<9>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<10>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<11>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<12>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<13>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<14>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_GPIO<15>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_HOUT                          | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_LRESETNMIENZ                  | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_LRESETZ                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_NAND_WP                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_NMIZ                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_NOR_WP                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_PACLKSEL                      | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_PCA9306_EN                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_PHY_INIT                      | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_PHY_RST                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_PORZ                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_RESETFULLZ                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_RESETSTAT_N                   | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_RESETZ                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_SSPCK                         | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_SSPCS1                        | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_SSPMISO                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_SSPMOSI                       | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_SYSCLKOUT                     | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_TIMI0                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_TRGRSTZ                       | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPA_TSIP0_CLKA0                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_TSIP0_FSA0                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_UCD9222_RST                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_VID_OE                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPA_WARM_RST                      | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_BOOTCOMPLETE                  | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_CORESEL<0>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_CORESEL<1>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_CORESEL<2>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_CORESEL<3>                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_DEBUG_LED<0>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_DEBUG_LED<1>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_DEBUG_LED<2>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_DEBUG_LED<3>                  | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_EEPROM_WP                     | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<0>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<1>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<2>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<3>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<4>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<5>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<6>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<7>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<8>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<9>                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<10>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<11>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<12>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<13>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<14>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_GPIO<15>                      | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_HOUT                          | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_LRESETNMIENZ                  | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_LRESETZ                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_NAND_WP                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_NMIZ                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_NOR_WP                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_PACLKSEL                      | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_PCA9306_EN                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_PHY_INIT                      | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_PHY_RST                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_PORZ                          | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_RESETFULLZ                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_RESETSTAT_N                   | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_RESETZ                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_SSPCK                         | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_SSPCS1                        | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_SSPMISO                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_SSPMOSI                       | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_SYSCLKOUT                     | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_TIMI0                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_TRGRSTZ                       | IBUF             | INPUT     | LVCMOS18             |       |          |         |              |          | 0 / 0    |                  |
+| DSPB_TSIP0_CLKA0                   | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_TSIP0_FSA0                    | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_UCD9222_RST                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_VID_OE                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| DSPB_WARM_RST                      | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| FMC1_PG_C2M                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FMC2_PG_C2M                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FRONT_LED<0>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FRONT_LED<1>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| FULL_RST                           | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| MGTAVCC_1V0_PG                     | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| MGTAVTT_1V2_PG                     | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| SP3AN_DEBUG_LED<0>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_DEBUG_LED<1>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_DEBUG_LED<2>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_DEBUG_LED<3>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_DEBUG_LED<4>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_DEBUG_LED<5>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_DEBUG_LED<6>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_DEBUG_LED<7>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SP3AN_GCLK                         | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| SRIO_RST_N                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_FSEL<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_FSEL<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<0>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<1>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<2>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<3>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<4>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<5>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<6>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_QFG<7>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_SPD<0>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_SPD<1>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| SW_SPD<2>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| UCD9222_A_PG                       | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| UCD9222_B_PG                       | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| V7_RESET                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| V7_RST                             | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC0V75_DSP_EN                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VCC0V75_DSP_PG                     | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC1V5_DSP_EN                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VCC1V5_DSP_PG                      | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC1V8_DSP_EN                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VCC1V8_DSP_PG                      | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC2V5_EN                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VCC_0V75_FPGA_PG                   | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_1V0_DSPA_EN                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VCC_1V0_DSPA_PG                    | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_1V0_DSPB_EN                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VCC_1V0_DSPB_PG                    | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_1V0_PG                         | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_1V2_PG                         | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_1V5_FPGA_PG                    | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_1V8_FPGA_PG                    | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_2V5_PG                         | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_3V3_FMC_PG                     | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_3V3_PG                         | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| VCC_VADJ_FMC_PG                    | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CDONE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CMPRESET_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS0_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS1_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCMPCE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCRST_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_WHCMPCE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_WLCMPCE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_SCNT_CMP_I_SRL16.U
+_GAND_SRL16_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_WCNT_HCMP_I_SRL16.
+U_GAND_SRL16_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_WCNT_LCMP_I_SRL16.
+U_GAND_SRL16_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
+SRL16.U_GANDX_SRL16_MSET
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

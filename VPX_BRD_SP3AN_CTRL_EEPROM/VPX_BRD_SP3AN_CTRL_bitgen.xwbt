@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\lrh_workspace\projects\simulator_new\github\simulator_vpx_fpga_sp3\VPX_BRD_SP3AN_CTRL_EEPROM\VPX_BRD_SP3AN_CTRL.ncd
+OUTFILE=D:\lrh_workspace\projects\simulator_new\github\simulator_vpx_fpga_sp3\VPX_BRD_SP3AN_CTRL_EEPROM\VPX_BRD_SP3AN_CTRL.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s400an-5fgg400
+WORKINGDIR=D:\lrh_workspace\projects\simulator_new\github\simulator_vpx_fpga_sp3\VPX_BRD_SP3AN_CTRL_EEPROM
+LICENSE=WebPack
+USER_INFO=__0_0_0

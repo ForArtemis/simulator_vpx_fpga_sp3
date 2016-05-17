@@ -1,0 +1,273 @@
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 
+xst -intstyle ise -ifn "D:/lrh_workspace/projects/simulator_new/github/simulator_vpx_fpga_sp3/VPX_BRD_SP3AN_CTRL_EEPROM/VPX_BRD_SP3AN_CTRL.xst" -ofn "D:/lrh_workspace/projects/simulator_new/github/simulator_vpx_fpga_sp3/VPX_BRD_SP3AN_CTRL_EEPROM/VPX_BRD_SP3AN_CTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc VPX_BRD_SP3AN_CTRL.ucf -p xc3s400an-fgg400-5 VPX_BRD_SP3AN_CTRL_cs.ngc VPX_BRD_SP3AN_CTRL.ngd  
+map -intstyle ise -p xc3s400an-fgg400-5 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm balanced -ir off -pr off -power off -o VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ngd VPX_BRD_SP3AN_CTRL.pcf 
+par -w -intstyle ise -ol high -t 1 VPX_BRD_SP3AN_CTRL_map.ncd VPX_BRD_SP3AN_CTRL.ncd VPX_BRD_SP3AN_CTRL.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml VPX_BRD_SP3AN_CTRL.twx VPX_BRD_SP3AN_CTRL.ncd -o VPX_BRD_SP3AN_CTRL.twr VPX_BRD_SP3AN_CTRL.pcf -ucf VPX_BRD_SP3AN_CTRL.ucf 
+bitgen -intstyle ise -f VPX_BRD_SP3AN_CTRL.ut VPX_BRD_SP3AN_CTRL.ncd 

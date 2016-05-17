@@ -1,0 +1,21 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init_test_isim_beh.exe" -prj "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init_test_beh.prj" "work.CPS1432_eeprom_init_test" "work.glbl" 
+ISim P.40xd (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/eeprom_wr.v" into library work
+Analyzing Verilog file "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init.v" into library work
+Analyzing Verilog file "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init_test.v" into library work
+Analyzing Verilog file "D:/Xilinx/14.3/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module eeprom_wr
+Compiling module CPS1432_eeprom_init
+Compiling module CPS1432_eeprom_init_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 Verilog Units
+Built simulation executable D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init_test_isim_beh.exe
+Fuse Memory Usage: 30428 KB
+Fuse CPU Usage: 514 ms

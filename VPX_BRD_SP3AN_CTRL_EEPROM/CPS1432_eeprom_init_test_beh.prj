@@ -1,0 +1,4 @@
+verilog work "eeprom_wr.v"
+verilog work "CPS1432_eeprom_init.v"
+verilog work "CPS1432_eeprom_init_test.v"
+verilog work "D:/Xilinx/14.3/ISE_DS/ISE//verilog/src/glbl.v"

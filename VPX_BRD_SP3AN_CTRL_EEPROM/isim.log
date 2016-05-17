@@ -1,0 +1,71 @@
+ISim log file
+Running: D:\lrh_workspace\projects\simulator_new\fpga_projects\VPX_BRD_SP3AN_CTRL\CPS1432_eeprom_init_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init_test_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.40xd (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING:  For instance uut/eeprom_wr_inst/, width 1 of formal port RD is not equal to width 32 of actual constant.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run all
+Stopped at time : 9384600 ns : File "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/eeprom_wr.v" Line 116
+ISim P.40xd (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING:  For instance uut/eeprom_wr_inst/, width 1 of formal port RD is not equal to width 32 of actual constant.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10.00us
+# run 10.00us
+# restart
+WARNING: Can't open restore file "isim/CPS1432_eeprom_init_test_isim_beh.exe.sim/tmp_save/_1". File ignored.
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+WARNING: Can't open restore file "isim/CPS1432_eeprom_init_test_isim_beh.exe.sim/tmp_save/_1". File ignored.
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+WARNING: Can't open restore file "isim/CPS1432_eeprom_init_test_isim_beh.exe.sim/tmp_save/_1". File ignored.
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+WARNING: Can't open restore file "isim/CPS1432_eeprom_init_test_isim_beh.exe.sim/tmp_save/_1". File ignored.
+# restart
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10.00us
+# run 10.00us
+# run 10.00us
+ISim P.40xd (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.40xd (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

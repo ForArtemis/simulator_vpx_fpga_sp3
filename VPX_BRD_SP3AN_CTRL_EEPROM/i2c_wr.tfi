@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+i2c_wr instance_name (
+    .clk(clk), 
+    .rst_n(rst_n), 
+    .wr(wr), 
+    .rd(rd), 
+    .addr(addr), 
+    .data_w(data_w), 
+    .data_r(data_r), 
+    .ack(ack), 
+    .scl(scl), 
+    .sda(sda)
+    );
+
+

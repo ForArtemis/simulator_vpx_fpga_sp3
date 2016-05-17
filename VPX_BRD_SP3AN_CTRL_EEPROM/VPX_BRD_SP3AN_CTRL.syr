@@ -1,0 +1,1846 @@
+Release 14.3 - xst P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: VPX_BRD_SP3AN_CTRL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "VPX_BRD_SP3AN_CTRL.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "VPX_BRD_SP3AN_CTRL"
+Output Format                      : NGC
+Target Device                      : xc3s400an-5-fgg400
+
+---- Source Options
+Top Module Name                    : VPX_BRD_SP3AN_CTRL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : User
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 2
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : Rebuilt
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+Setting FSM Encoding Algorithm to : User
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "i2c_wr.v" in library work
+Compiling verilog file "reset_req_s.v" in library work
+Compiling verilog include file "params.v"
+Module <i2c_wr> compiled
+Compiling verilog file "CLK_DCM.v" in library work
+Module <reset_req_s> compiled
+Compiling verilog file "fpga_internal_reset.v" in library work
+Compiling verilog include file "params.v"
+Module <CLK_DCM> compiled
+Compiling verilog file "dsp_spi.v" in library work
+Module <fpga_internal_reset> compiled
+Compiling verilog file "debouncer.v" in library work
+Compiling verilog include file "params.v"
+Module <dsp_spi> compiled
+Compiling verilog file "CPS1432_eeprom_init.v" in library work
+Module <debouncer> compiled
+Compiling verilog file "ad9516_b.v" in library work
+Module <CPS1432_eeprom_init> compiled
+Compiling verilog file "ad9516_a.v" in library work
+Module <ad9516_b> compiled
+Compiling verilog file "vpx_brd_ctrl_pad.v" in library work
+Module <ad9516_a> compiled
+Compiling verilog file "vpx_brd_ctrl_core.v" in library work
+Compiling verilog include file "params.v"
+Module <vpx_brd_ctrl_pad> compiled
+Compiling verilog file "VPX_BRD_SP3AN_CTRL.v" in library work
+Compiling verilog include file "params.v"
+Module <vpx_brd_ctrl_core> compiled
+Module <VPX_BRD_SP3AN_CTRL> compiled
+No errors in compilation
+Analysis of file <"VPX_BRD_SP3AN_CTRL.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <VPX_BRD_SP3AN_CTRL> in library <work>.
+
+Analyzing hierarchy for module <vpx_brd_ctrl_pad> in library <work>.
+
+Analyzing hierarchy for module <vpx_brd_ctrl_core> in library <work> with parameters.
+	SM_CLKG = "0111"
+	SM_FAIL = "1101"
+	SM_IDLE = "0000"
+	SM_PMBS_1 = "0010"
+	SM_PMBS_2 = "0011"
+	SM_POFF1 = "1011"
+	SM_POFF2 = "1100"
+	SM_PORWR = "1000"
+	SM_PWOK = "1010"
+	SM_V075 = "0110"
+	SM_V1P5 = "0101"
+	SM_V1P8 = "0100"
+	SM_V2P5 = "0001"
+	SM_WAIT = "1001"
+
+Analyzing hierarchy for module <CLK_DCM> in library <work>.
+
+Analyzing hierarchy for module <ad9516_a> in library <work> with parameters.
+	end_state = "00000000000000000000000000000110"
+	idle = "00000000000000000000000000000000"
+	reg_select = "00000000000000000000000000000101"
+	single_reg_select = "00000000000000000000000000000100"
+	step1 = "00000000000000000000000000000001"
+	step2 = "00000000000000000000000000000010"
+	step3 = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <ad9516_b> in library <work> with parameters.
+	end_state = "00000000000000000000000000000110"
+	idle = "00000000000000000000000000000000"
+	reg_select = "00000000000000000000000000000101"
+	single_reg_select = "00000000000000000000000000000100"
+	step1 = "00000000000000000000000000000001"
+	step2 = "00000000000000000000000000000010"
+	step3 = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <fpga_internal_reset> in library <work> with parameters.
+	idle = "00"
+	reset_assert = "01"
+	reset_release = "10"
+
+Analyzing hierarchy for module <dsp_spi> in library <work>.
+
+Analyzing hierarchy for module <debouncer> in library <work>.
+
+Analyzing hierarchy for module <reset_req_s> in library <work> with parameters.
+	hreset_assert = "1001"
+	hreset_check = "1000"
+	hreset_delay = "1010"
+	hreset_release = "1011"
+	idle = "0000"
+	por_assert = "0001"
+	por_delay = "0010"
+	por_release = "0011"
+	resetfull_assert = "0101"
+	resetfull_check = "0100"
+	resetfull_delay = "0110"
+	resetfull_release = "0111"
+	sreset_assert = "1101"
+	sreset_check = "1100"
+	sreset_delay = "1110"
+	sreset_release = "1111"
+
+Analyzing hierarchy for module <CPS1432_eeprom_init> in library <work> with parameters.
+	DATA_NUM = "00000000000000000000000000101101"
+	IDLE = "00000000000000000000000000000000"
+	PORT_CONTROL_CSR_INIT_VAL = "11010000010000000000000000000001"
+	STEP1 = "00000000000000000000000000000001"
+	STEP2 = "00000000000000000000000000000010"
+	STEP3 = "00000000000000000000000000000011"
+	STEP4 = "00000000000000000000000000000100"
+	STEP5 = "00000000000000000000000000000101"
+	STEP6 = "00000000000000000000000000000110"
+
+Analyzing hierarchy for module <i2c_wr> in library <work> with parameters.
+	Ackn = "10000000000"
+	Addr_write = "00000010000"
+	Ctrl_read = "00010000000"
+	Ctrl_write1 = "00000001000"
+	Ctrl_write2 = "00000001100"
+	Data_read = "00100000000"
+	Data_write = "00000100000"
+	Idle = "00000000001"
+	NO = "00000000000000000000000000000000"
+	Read_start = "00001000000"
+	Ready = "00000000010"
+	Stop = "01000000000"
+	Write_start = "00000000100"
+	YES = "00000000000000000000000000000001"
+	head_begin = "001"
+	head_bit = "010"
+	head_end = "100"
+	sh8in_begin = "0000000001"
+	sh8in_bit0 = "0100000000"
+	sh8in_bit1 = "0010000000"
+	sh8in_bit2 = "0001000000"
+	sh8in_bit3 = "0000100000"
+	sh8in_bit4 = "0000010000"
+	sh8in_bit5 = "0000001000"
+	sh8in_bit6 = "0000000100"
+	sh8in_bit7 = "0000000010"
+	sh8in_end = "1000000000"
+	sh8out_bit0 = "010000000"
+	sh8out_bit1 = "001000000"
+	sh8out_bit2 = "000100000"
+	sh8out_bit3 = "000010000"
+	sh8out_bit4 = "000001000"
+	sh8out_bit5 = "000000100"
+	sh8out_bit6 = "000000010"
+	sh8out_bit7 = "000000001"
+	sh8out_end = "100000000"
+	stop_begin = "001"
+	stop_bit = "010"
+	stop_end = "100"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <VPX_BRD_SP3AN_CTRL>.
+Module <VPX_BRD_SP3AN_CTRL> is correct for synthesis.
+ 
+Analyzing module <vpx_brd_ctrl_pad> in library <work>.
+Module <vpx_brd_ctrl_pad> is correct for synthesis.
+ 
+Analyzing module <vpx_brd_ctrl_core> in library <work>.
+	SM_CLKG = 4'b0111
+	SM_FAIL = 4'b1101
+	SM_IDLE = 4'b0000
+	SM_PMBS_1 = 4'b0010
+	SM_PMBS_2 = 4'b0011
+	SM_POFF1 = 4'b1011
+	SM_POFF2 = 4'b1100
+	SM_PORWR = 4'b1000
+	SM_PWOK = 4'b1010
+	SM_V075 = 4'b0110
+	SM_V1P5 = 4'b0101
+	SM_V1P8 = 4'b0100
+	SM_V2P5 = 4'b0001
+	SM_WAIT = 4'b1001
+Module <vpx_brd_ctrl_core> is correct for synthesis.
+ 
+    Set property "fsm_encoding = user" for signal <PW_SM>.
+Analyzing module <CLK_DCM> in library <work>.
+Module <CLK_DCM> is correct for synthesis.
+ 
+    Set user-defined property "CLKDV_DIVIDE =  16.000000" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "CLKIN_PERIOD =  10.000000" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST1> in unit <CLK_DCM>.
+    Set user-defined property "CLKDV_DIVIDE =  16.000000" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "CLKIN_PERIOD =  160.000000" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST2> in unit <CLK_DCM>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <U1_CLKIN_IBUFG_INST> in unit <CLK_DCM>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <U1_CLKIN_IBUFG_INST> in unit <CLK_DCM>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <U1_CLKIN_IBUFG_INST> in unit <CLK_DCM>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <U1_CLKIN_IBUFG_INST> in unit <CLK_DCM>.
+    Set user-defined property "INIT =  1" for instance <U2_FDS_INST> in unit <CLK_DCM>.
+    Set user-defined property "INIT =  0" for instance <U2_FD1_INST> in unit <CLK_DCM>.
+    Set user-defined property "INIT =  0" for instance <U2_FD2_INST> in unit <CLK_DCM>.
+    Set user-defined property "INIT =  0" for instance <U2_FD3_INST> in unit <CLK_DCM>.
+Analyzing module <ad9516_a> in library <work>.
+	end_state = 32'sb00000000000000000000000000000110
+	idle = 32'sb00000000000000000000000000000000
+	reg_select = 32'sb00000000000000000000000000000101
+	single_reg_select = 32'sb00000000000000000000000000000100
+	step1 = 32'sb00000000000000000000000000000001
+	step2 = 32'sb00000000000000000000000000000010
+	step3 = 32'sb00000000000000000000000000000011
+Module <ad9516_a> is correct for synthesis.
+ 
+    Set property "fsm_encoding = user" for signal <state>.
+Analyzing module <ad9516_b> in library <work>.
+	end_state = 32'sb00000000000000000000000000000110
+	idle = 32'sb00000000000000000000000000000000
+	reg_select = 32'sb00000000000000000000000000000101
+	single_reg_select = 32'sb00000000000000000000000000000100
+	step1 = 32'sb00000000000000000000000000000001
+	step2 = 32'sb00000000000000000000000000000010
+	step3 = 32'sb00000000000000000000000000000011
+Module <ad9516_b> is correct for synthesis.
+ 
+    Set property "fsm_encoding = user" for signal <state>.
+Analyzing module <fpga_internal_reset> in library <work>.
+	idle = 2'b00
+	reset_assert = 2'b01
+	reset_release = 2'b10
+Module <fpga_internal_reset> is correct for synthesis.
+ 
+    Set property "fsm_encoding = user" for signal <reset_st>.
+Analyzing module <dsp_spi> in library <work>.
+Module <dsp_spi> is correct for synthesis.
+ 
+Analyzing module <debouncer> in library <work>.
+Module <debouncer> is correct for synthesis.
+ 
+Analyzing module <reset_req_s> in library <work>.
+	hreset_assert = 4'b1001
+	hreset_check = 4'b1000
+	hreset_delay = 4'b1010
+	hreset_release = 4'b1011
+	idle = 4'b0000
+	por_assert = 4'b0001
+	por_delay = 4'b0010
+	por_release = 4'b0011
+	resetfull_assert = 4'b0101
+	resetfull_check = 4'b0100
+	resetfull_delay = 4'b0110
+	resetfull_release = 4'b0111
+	sreset_assert = 4'b1101
+	sreset_check = 4'b1100
+	sreset_delay = 4'b1110
+	sreset_release = 4'b1111
+Module <reset_req_s> is correct for synthesis.
+ 
+    Set property "fsm_encoding = user" for signal <reset_st>.
+Analyzing module <CPS1432_eeprom_init> in library <work>.
+	DATA_NUM = 32'sb00000000000000000000000000101101
+	IDLE = 32'sb00000000000000000000000000000000
+	PORT_CONTROL_CSR_INIT_VAL = 32'b11010000010000000000000000000001
+	STEP1 = 32'sb00000000000000000000000000000001
+	STEP2 = 32'sb00000000000000000000000000000010
+	STEP3 = 32'sb00000000000000000000000000000011
+	STEP4 = 32'sb00000000000000000000000000000100
+	STEP5 = 32'sb00000000000000000000000000000101
+	STEP6 = 32'sb00000000000000000000000000000110
+INFO:Xst:1433 - Contents of array <eeprom_data> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <CPS1432_eeprom_init> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  true" for signal <DATA_out>.
+    Set user-defined property "KEEP =  true" for signal <state>.
+    Set user-defined property "KEEP =  true" for signal <DATA>.
+Analyzing module <i2c_wr> in library <work>.
+	Ackn = 11'b10000000000
+	Addr_write = 11'b00000010000
+	Ctrl_read = 11'b00010000000
+	Ctrl_write1 = 11'b00000001000
+	Ctrl_write2 = 11'b00000001100
+	Data_read = 11'b00100000000
+	Data_write = 11'b00000100000
+	Idle = 11'b00000000001
+	NO = 32'sb00000000000000000000000000000000
+	Read_start = 11'b00001000000
+	Ready = 11'b00000000010
+	Stop = 11'b01000000000
+	Write_start = 11'b00000000100
+	YES = 32'sb00000000000000000000000000000001
+	head_begin = 3'b001
+	head_bit = 3'b010
+	head_end = 3'b100
+	sh8in_begin = 10'b0000000001
+	sh8in_bit0 = 10'b0100000000
+	sh8in_bit1 = 10'b0010000000
+	sh8in_bit2 = 10'b0001000000
+	sh8in_bit3 = 10'b0000100000
+	sh8in_bit4 = 10'b0000010000
+	sh8in_bit5 = 10'b0000001000
+	sh8in_bit6 = 10'b0000000100
+	sh8in_bit7 = 10'b0000000010
+	sh8in_end = 10'b1000000000
+	sh8out_bit0 = 9'b010000000
+	sh8out_bit1 = 9'b001000000
+	sh8out_bit2 = 9'b000100000
+	sh8out_bit3 = 9'b000010000
+	sh8out_bit4 = 9'b000001000
+	sh8out_bit5 = 9'b000000100
+	sh8out_bit6 = 9'b000000010
+	sh8out_bit7 = 9'b000000001
+	sh8out_end = 9'b100000000
+	stop_begin = 3'b001
+	stop_bit = 3'b010
+	stop_end = 3'b100
+	Enabling task <shift_head>.
+	Enabling task <shift8_out>.
+	Enabling task <shift8_out>.
+	Enabling task <shift8_out>.
+	Enabling task <shift8_out>.
+	Enabling task <shift_head>.
+	Enabling task <shift8_out>.
+	Enabling task <shift8in>.
+	Enabling task <shift_stop>.
+Module <i2c_wr> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  true" for signal <sh8in_state>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <dspa_ucd9222_rst_n_o> in unit <vpx_brd_ctrl_core> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <dspb_ucd9222_rst_n_o> in unit <vpx_brd_ctrl_core> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <addr<7>> in unit <dsp_spi> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <vpx_brd_ctrl_pad>.
+    Related source file is "vpx_brd_ctrl_pad.v".
+    Found 1-bit tristate buffer for signal <DSPA_SSPMISO>.
+    Found 1-bit tristate buffer for signal <DSPB_SSPMISO>.
+    Found 16-bit tristate buffer for signal <DSPA_GPIO>.
+    Found 16-bit tristate buffer for signal <DSPB_GPIO>.
+    Summary:
+	inferred  34 Tristate(s).
+Unit <vpx_brd_ctrl_pad> synthesized.
+
+
+Synthesizing Unit <ad9516_a>.
+    Related source file is "ad9516_a.v".
+WARNING:Xst:646 - Signal <config_finished> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 70x24-bit ROM for signal <$varindex0001> created at line 240.
+    Found 1-bit 24-to-1 multiplexer for signal <$varindex0000> created at line 247.
+    Found 3-bit register for signal <AD9516_LD>.
+    Found 5-bit register for signal <cnt_bit>.
+    Found 5-bit subtractor for signal <cnt_bit$addsub0000> created at line 265.
+    Found 7-bit register for signal <cnt_reg>.
+    Found 7-bit adder for signal <cnt_reg$addsub0000> created at line 280.
+    Found 24-bit register for signal <data_temp>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <sdata>.
+    Found 1-bit register for signal <sen>.
+    Found 3-bit register for signal <state>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <ad9516_a> synthesized.
+
+
+Synthesizing Unit <ad9516_b>.
+    Related source file is "ad9516_b.v".
+WARNING:Xst:646 - Signal <config_finished> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 70x24-bit ROM for signal <$varindex0001> created at line 239.
+    Found 1-bit 24-to-1 multiplexer for signal <$varindex0000> created at line 246.
+    Found 3-bit register for signal <AD9516_LD>.
+    Found 5-bit register for signal <cnt_bit>.
+    Found 5-bit subtractor for signal <cnt_bit$addsub0000> created at line 264.
+    Found 7-bit register for signal <cnt_reg>.
+    Found 7-bit adder for signal <cnt_reg$addsub0000> created at line 279.
+    Found 24-bit register for signal <data_temp>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <sdata>.
+    Found 1-bit register for signal <sen>.
+    Found 3-bit register for signal <state>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <ad9516_b> synthesized.
+
+
+Synthesizing Unit <fpga_internal_reset>.
+    Related source file is "fpga_internal_reset.v".
+    Found finite state machine <FSM_0> for signal <reset_st>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst_n                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <fpga_reset_n>.
+    Found 16-bit register for signal <fpga_reset_counter>.
+    Found 16-bit adder for signal <fpga_reset_counter$addsub0000> created at line 85.
+    Found 16-bit comparator greatequal for signal <reset_st$cmp_ge0000> created at line 79.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <fpga_internal_reset> synthesized.
+
+
+Synthesizing Unit <dsp_spi>.
+    Related source file is "dsp_spi.v".
+    Found finite state machine <FSM_1> for signal <spi_c>.
+    -----------------------------------------------------------------------
+    | States             | 17                                             |
+    | Transitions        | 17                                             |
+    | Inputs             | 0                                              |
+    | Outputs            | 17                                             |
+    | Clock              | DSP_SCK1                  (falling_edge)       |
+    | Reset              | DSP_SSEL1                 (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000                                          |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit register for signal <addr<6:0>>.
+    Found 8-bit register for signal <data_w>.
+    Found 1-bit register for signal <rw>.
+    Found 1-bit register for signal <wr_event_cng>.
+    Found 1-bit register for signal <rdy>.
+    Found 1-bit register for signal <DSP_MISO1>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  19 D-type flip-flop(s).
+Unit <dsp_spi> synthesized.
+
+
+Synthesizing Unit <debouncer>.
+    Related source file is "debouncer.v".
+    Found 1-bit register for signal <signal_o>.
+    Found 16-bit up counter for signal <clk_c>.
+    Found 16-bit comparator greatequal for signal <clk_c$cmp_ge0000> created at line 57.
+    Found 1-bit register for signal <debounce_clk>.
+    Found 1-bit register for signal <signal_sample_1>.
+    Found 1-bit register for signal <signal_sample_2>.
+    Found 1-bit register for signal <signal_sample_3>.
+    Found 1-bit register for signal <signal_sample_4>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <reset_req_s>.
+    Related source file is "reset_req_s.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <reset_st> of Case statement line 104 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <reset_st> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_2> for signal <reset_st>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 82                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 19                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst_n                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <por_out_n>.
+    Found 1-bit register for signal <reset_out_n>.
+    Found 1-bit register for signal <resetfull_out_n>.
+    Found 24-bit register for signal <delay_timing_counter>.
+    Found 24-bit adder for signal <delay_timing_counter$share0000> created at line 104.
+    Found 24-bit comparator greatequal for signal <reset_st$cmp_ge0000> created at line 140.
+    Found 24-bit comparator greatequal for signal <reset_st$cmp_ge0001> created at line 159.
+    Found 24-bit comparator greatequal for signal <reset_st$cmp_ge0002> created at line 181.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <reset_req_s> synthesized.
+
+
+Synthesizing Unit <i2c_wr>.
+    Related source file is "i2c_wr.v".
+    Found finite state machine <FSM_3> for signal <main_state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 25                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 13                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst_n                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000001                                    |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Using one-hot encoding for signal <head_state>.
+    Using one-hot encoding for signal <sh8out_state>.
+    Using one-hot encoding for signal <stop_state>.
+    Using one-hot encoding for signal <sh8in_state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <head_state> of Case statement line 469 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <head_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <head_state> of Case statement line 469 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <head_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sh8out_state> of Case statement line 385 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sh8out_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sh8out_state> of Case statement line 385 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sh8out_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sh8out_state> of Case statement line 385 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sh8out_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sh8out_state> of Case statement line 385 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sh8out_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sh8out_state> of Case statement line 385 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sh8out_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <stop_state> of Case statement line 504 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <stop_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <sh8in_state> of Case statement line 303 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <sh8in_state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 8-bit register for signal <data_out>.
+    Found 1-bit register for signal <ack>.
+    Found 1-bit tristate buffer for signal <sda>.
+    Found 1-bit register for signal <scl>.
+    Found 8-bit register for signal <data_r>.
+    Found 1-bit register for signal <ff>.
+    Found 2-bit register for signal <head_buf>.
+    Found 3-bit register for signal <head_state>.
+    Found 1-bit register for signal <link_head>.
+    Found 1-bit register for signal <link_sda>.
+    Found 1-bit register for signal <link_stop>.
+    Found 1-bit register for signal <link_write>.
+    Found 1-bit register for signal <rf>.
+    Found 10-bit register for signal <sh8in_state>.
+    Found 8-bit register for signal <sh8out_buf>.
+    Found 9-bit register for signal <sh8out_state>.
+    Found 2-bit register for signal <stop_buf>.
+    Found 3-bit register for signal <stop_state>.
+    Found 1-bit register for signal <wf>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  62 D-type flip-flop(s).
+	inferred   1 Tristate(s).
+Unit <i2c_wr> synthesized.
+
+
+Synthesizing Unit <CLK_DCM>.
+    Related source file is "CLK_DCM.v".
+Unit <CLK_DCM> synthesized.
+
+
+Synthesizing Unit <CPS1432_eeprom_init>.
+    Related source file is "CPS1432_eeprom_init.v".
+WARNING:Xst:646 - Signal <port_control_csr_input_en<0:1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <port_control_csr_input_en<5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <port_control_csr_input_en<7:13>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <port_control_csr_en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <port_control_csr_dis> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <bcast_dev_rte_table<0>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bcast_dev_rte_table<1:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <bcast_dev_rte_table<5:255>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1580 - Signal <DATA_out> with a "KEEP" property is assigned but never used. Related logic will not be removed.
+    Found finite state machine <FSM_4> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000                                       |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:697 - FSM extraction is enabled. Signal <state> cannot be preserved.
+    Found 8-bit 45-to-1 multiplexer for signal <$varindex0000> created at line 171.
+    Found 16-bit register for signal <ADDR>.
+    Found 16-bit register for signal <cfg_cnt>.
+    Found 16-bit adder for signal <cfg_cnt$share0000> created at line 153.
+    Found 1-bit register for signal <cfg_start_r>.
+    Found 8-bit register for signal <DATA>.
+    Found 16-bit register for signal <delay_cnt>.
+    Found 16-bit adder for signal <delay_cnt$addsub0000>.
+    Found 1-bit register for signal <RD>.
+    Found 16-bit comparator less for signal <state$cmp_lt0000> created at line 166.
+    Found 16-bit comparator less for signal <state$cmp_lt0001> created at line 184.
+    Found 1-bit register for signal <WR>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <CPS1432_eeprom_init> synthesized.
+
+
+Synthesizing Unit <vpx_brd_ctrl_core>.
+    Related source file is "vpx_brd_ctrl_core.v".
+WARNING:Xst:646 - Signal <dspb_spi_w<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dspb_spi_rw> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dspb_spi_reg<63>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dspb_spi_reg<47:42>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <dspb_spi_reg<39:36>> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:646 - Signal <dspb_spi_cs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dspa_spi_w<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dspa_spi_rw> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dspa_spi_reg<63>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dspa_spi_reg<47:42>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <dspa_spi_reg<39:36>> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:646 - Signal <dspa_spi_cs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Register <dspb_bm_gpio> equivalent to <dspa_bm_gpio> has been removed
+    Register <dspb_tsip0_fsa0_o> equivalent to <dspa_tsip0_fsa0_o> has been removed
+    Register <dspa_ucd9222_ena2_o> equivalent to <dspa_ucd9222_ena1_o> has been removed
+    Register <dspb_ucd9222_ena1_o> equivalent to <dspa_ucd9222_ena1_o> has been removed
+    Register <dspb_ucd9222_ena2_o> equivalent to <dspa_ucd9222_ena1_o> has been removed
+    Register <dspb_vid_oe_n_o> equivalent to <dspa_vid_oe_n_o> has been removed
+    Found finite state machine <FSM_5> for signal <PW_SM>.
+    -----------------------------------------------------------------------
+    | States             | 14                                             |
+    | Transitions        | 49                                             |
+    | Inputs             | 17                                             |
+    | Outputs            | 17                                             |
+    | Clock              | main_50mhz_clk            (rising_edge)        |
+    | Reset              | fpga_ireset_n             (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | user                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 8-bit latch for signal <dspa_spi_r>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <dspb_spi_r>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <srio_rst_n_o>.
+    Found 1-bit register for signal <dspb_tsip0_clka0_o>.
+    Found 1-bit register for signal <dspa_tsip0_fsa0_o>.
+    Found 1-bit register for signal <vcc2p5_en_o>.
+    Found 1-bit register for signal <vcc1p5_dsp_en_o>.
+    Found 1-bit register for signal <dspb_timi0_o>.
+    Found 1-bit register for signal <dspa_timi0_o>.
+    Found 1-bit register for signal <dspb_gpio_en>.
+    Found 1-bit register for signal <vcc0p75_dsp_en_o>.
+    Found 1-bit register for signal <dspa_gpio_en>.
+    Found 1-bit register for signal <dspa_tsip0_clka0_o>.
+    Found 1-bit register for signal <dspa_vid_oe_n_o>.
+    Found 1-bit register for signal <dspa_ucd9222_ena1_o>.
+    Found 1-bit register for signal <vcc1p8_dsp_en_o>.
+    Found 2-bit register for signal <ad9516_1_ld_d>.
+    Found 2-bit register for signal <ad9516_2_ld_d>.
+    Found 1-bit register for signal <all_power>.
+    Found 3-bit up counter for signal <clk_div>.
+    Found 26-bit up counter for signal <debug_led_cnt>.
+    Found 16-bit register for signal <dspa_bm_gpio>.
+    Found 1-bit register for signal <dspa_bootcomplete_s1>.
+    Found 1-bit register for signal <dspa_bootcomplete_s2>.
+    Found 16-bit register for signal <dspa_gpio>.
+    Found 16-bit register for signal <dspa_gpio_ctrl_delay>.
+    Found 16-bit adder for signal <dspa_gpio_ctrl_delay$addsub0000> created at line 1320.
+    Found 16-bit comparator greatequal for signal <dspa_gpio_en$cmp_ge0000> created at line 1313.
+    Found 1-bit register for signal <dspa_hout_s1>.
+    Found 1-bit register for signal <dspa_hout_s2>.
+    Found 2-bit register for signal <dspa_pgucd9222_d>.
+    Found 1-bit register for signal <dspa_phy_int_n_s1>.
+    Found 1-bit register for signal <dspa_phy_int_n_s2>.
+    Found 1-bit register for signal <dspa_resetstat_n>.
+    Found 1-bit register for signal <dspa_resetstat_n_50s1>.
+    Found 1-bit register for signal <dspa_resetstat_n_50s2>.
+    Found 2-bit register for signal <dspa_resetstat_nd>.
+    Found 1-bit register for signal <dspa_softreset_req_n>.
+    Found 4-bit register for signal <dspa_spi_reg<59:56>>.
+    Found 1-bit register for signal <dspa_spi_reg<41>>.
+    Found 4-bit register for signal <dspa_spi_reg<35:32>>.
+    Found 1-bit register for signal <dspa_sysclkout_s1>.
+    Found 1-bit register for signal <dspa_sysclkout_s2>.
+    Found 1-bit register for signal <dspa_trgrstz_50s1>.
+    Found 1-bit register for signal <dspa_trgrstz_50s2>.
+    Found 1-bit register for signal <dspa_trgrstz_s1>.
+    Found 1-bit register for signal <dspa_trgrstz_s2>.
+    Found 2-bit register for signal <dspa_ucd9222_pg1_d>.
+    Found 2-bit register for signal <dspa_ucd9222_pg2_d>.
+    Found 1-bit register for signal <dspa_warm_reset_s1>.
+    Found 1-bit register for signal <dspa_warm_reset_s2>.
+    Found 1-bit register for signal <dspa_warmreset_n_50s1>.
+    Found 1-bit register for signal <dspa_warmreset_n_50s2>.
+    Found 1-bit register for signal <dspb_bootcomplete_s1>.
+    Found 1-bit register for signal <dspb_bootcomplete_s2>.
+    Found 16-bit register for signal <dspb_gpio>.
+    Found 16-bit register for signal <dspb_gpio_ctrl_delay>.
+    Found 16-bit adder for signal <dspb_gpio_ctrl_delay$addsub0000> created at line 1354.
+    Found 16-bit comparator greatequal for signal <dspb_gpio_en$cmp_ge0000> created at line 1347.
+    Found 1-bit register for signal <dspb_hout_s1>.
+    Found 1-bit register for signal <dspb_hout_s2>.
+    Found 2-bit register for signal <dspb_pgucd9222_d>.
+    Found 1-bit register for signal <dspb_phy_int_n_s1>.
+    Found 1-bit register for signal <dspb_phy_int_n_s2>.
+    Found 1-bit register for signal <dspb_resetstat_n>.
+    Found 1-bit register for signal <dspb_resetstat_n_50s1>.
+    Found 1-bit register for signal <dspb_resetstat_n_50s2>.
+    Found 2-bit register for signal <dspb_resetstat_nd>.
+    Found 1-bit register for signal <dspb_softreset_req_n>.
+    Found 4-bit register for signal <dspb_spi_reg<59:56>>.
+    Found 1-bit register for signal <dspb_spi_reg<41>>.
+    Found 4-bit register for signal <dspb_spi_reg<35:32>>.
+    Found 1-bit register for signal <dspb_sysclkout_s1>.
+    Found 1-bit register for signal <dspb_sysclkout_s2>.
+    Found 1-bit register for signal <dspb_trgrstz_50s1>.
+    Found 1-bit register for signal <dspb_trgrstz_50s2>.
+    Found 1-bit register for signal <dspb_trgrstz_s1>.
+    Found 1-bit register for signal <dspb_trgrstz_s2>.
+    Found 2-bit register for signal <dspb_ucd9222_pg1_d>.
+    Found 2-bit register for signal <dspb_ucd9222_pg2_d>.
+    Found 1-bit register for signal <dspb_warm_reset_s1>.
+    Found 1-bit register for signal <dspb_warm_reset_s2>.
+    Found 1-bit register for signal <dspb_warmreset_n_50s1>.
+    Found 1-bit register for signal <dspb_warmreset_n_50s2>.
+    Found 1-bit register for signal <fpga_rst_n_50s1>.
+    Found 1-bit register for signal <fpga_rst_n_50s2>.
+    Found 1-bit register for signal <fpga_rst_n_s1>.
+    Found 1-bit register for signal <fpga_rst_n_s2>.
+    Found 8-bit up counter for signal <fs_cnt>.
+    Found 1-bit register for signal <full_reset_s1>.
+    Found 1-bit register for signal <full_reset_s2>.
+    Found 1-bit register for signal <fullreset_n_50s1>.
+    Found 1-bit register for signal <fullreset_n_50s2>.
+    Found 1-bit register for signal <half_clk>.
+    Found 1-bit register for signal <pg_ex_dsp>.
+    Found 24-bit register for signal <PW_c>.
+    Found 24-bit adder for signal <PW_c$share0000> created at line 1460.
+    Found 24-bit comparator greatequal for signal <PW_SM$cmp_ge0000> created at line 1464.
+    Found 24-bit comparator greatequal for signal <PW_SM$cmp_ge0001> created at line 1517.
+    Found 24-bit register for signal <PW_time_out>.
+    Found 24-bit comparator greatequal for signal <PW_time_out$cmp_ge0000> created at line 1510.
+    Found 24-bit adder for signal <PW_time_out$share0000> created at line 1460.
+    Found 1-bit register for signal <resetfull_req_n>.
+    Found 8-bit register for signal <rst_r>.
+    Found 1-bit register for signal <set_ad9516>.
+    Found 2-bit register for signal <vcc0p75_dsp_pgood_d>.
+    Found 2-bit register for signal <vcc0p75_fpga_pgood_d>.
+    Found 2-bit register for signal <vcc1p0_mgtavcc_pgood_d>.
+    Found 2-bit register for signal <vcc1p0_pgood_d>.
+    Found 2-bit register for signal <vcc1p2_mgtavtt_pgood_d>.
+    Found 2-bit register for signal <vcc1p2_pgood_d>.
+    Found 2-bit register for signal <vcc1p5_dsp_pgood_d>.
+    Found 2-bit register for signal <vcc1p5_fpga_pgood_d>.
+    Found 2-bit register for signal <vcc1p8_dsp_pgood_d>.
+    Found 2-bit register for signal <vcc1p8_fpga_pgood_d>.
+    Found 2-bit register for signal <vcc2p5_pgood_d>.
+    Found 2-bit register for signal <vcc3p3_fmc_pgood_d>.
+    Found 2-bit register for signal <vcc3p3_pgood_d>.
+    Found 2-bit register for signal <vcc_vadj_fmc_pgood_d>.
+    Found 1-bit register for signal <wr_cng_1t_a>.
+    Found 1-bit register for signal <wr_cng_1t_b>.
+    Found 1-bit register for signal <wr_cng_2t_a>.
+    Found 1-bit register for signal <wr_cng_2t_b>.
+    Found 1-bit register for signal <wr_cng_3t_a>.
+    Found 1-bit register for signal <wr_cng_3t_b>.
+    Found 1-bit xor2 for signal <wr_event_pulse_a>.
+    Found 1-bit xor2 for signal <wr_event_pulse_b>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 Counter(s).
+	inferred 275 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+Unit <vpx_brd_ctrl_core> synthesized.
+
+
+Synthesizing Unit <VPX_BRD_SP3AN_CTRL>.
+    Related source file is "VPX_BRD_SP3AN_CTRL.v".
+Unit <VPX_BRD_SP3AN_CTRL> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 70x24-bit ROM                                         : 2
+# Adders/Subtractors                                   : 12
+ 16-bit adder                                          : 5
+ 24-bit adder                                          : 3
+ 5-bit subtractor                                      : 2
+ 7-bit adder                                           : 2
+# Counters                                             : 7
+ 16-bit up counter                                     : 4
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 242
+ 1-bit register                                        : 186
+ 10-bit register                                       : 1
+ 16-bit register                                       : 9
+ 2-bit register                                        : 26
+ 24-bit register                                       : 5
+ 3-bit register                                        : 6
+ 5-bit register                                        : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 4
+ 9-bit register                                        : 1
+# Latches                                              : 2
+ 8-bit latch                                           : 2
+# Comparators                                          : 17
+ 16-bit comparator greatequal                          : 7
+ 16-bit comparator less                                : 2
+ 24-bit comparator greatequal                          : 8
+# Multiplexers                                         : 3
+ 1-bit 24-to-1 multiplexer                             : 2
+ 8-bit 45-to-1 multiplexer                             : 1
+# Tristates                                            : 5
+ 1-bit tristate buffer                                 : 3
+ 16-bit tristate buffer                                : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Optimizing FSM <Inst_vpx_brd_ctrl_core/PW_SM/FSM> on signal <PW_SM[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+-------------------
+Optimizing FSM <Inst_vpx_brd_ctrl_core/CPS1432_eeprom_init_inst/state/FSM> on signal <state[1:8]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000000 | 00000000
+ 00000001 | 00000001
+ 00000010 | 00000010
+ 00000011 | 00000011
+ 00000100 | 00000100
+ 00000101 | 00000101
+ 00000110 | 00000110
+----------------------
+Optimizing FSM <Inst_vpx_brd_ctrl_core/CPS1432_eeprom_init_inst/i2c_wr_inst/main_state/FSM> on signal <main_state[1:11]> with user encoding.
+----------------------------
+ State       | Encoding
+----------------------------
+ 00000000001 | 00000000001
+ 00000000010 | 00000000010
+ 00000000100 | 00000000100
+ 00000001000 | 00000001000
+ 00000001100 | 00000001100
+ 00000010000 | 00000010000
+ 00000100000 | 00000100000
+ 00001000000 | 00001000000
+ 00010000000 | 00010000000
+ 00100000000 | 00100000000
+ 01000000000 | 01000000000
+ 10000000000 | 10000000000
+----------------------------
+Optimizing FSM <Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_a/reset_st/FSM> on signal <reset_st[1:4]> with user encoding.
+Optimizing FSM <Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/reset_st/FSM> on signal <reset_st[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+ 1110  | 1110
+ 1111  | 1111
+-------------------
+Optimizing FSM <Inst_vpx_brd_ctrl_core/Inst_dspa_spi/spi_c/FSM> on signal <spi_c[1:5]> with user encoding.
+Optimizing FSM <Inst_vpx_brd_ctrl_core/Inst_dspb_spi/spi_c/FSM> on signal <spi_c[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 00001 | 00001
+ 00010 | 00010
+ 00011 | 00011
+ 00100 | 00100
+ 00101 | 00101
+ 00110 | 00110
+ 00111 | 00111
+ 01000 | 01000
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01100 | 01100
+ 01101 | 01101
+ 01110 | 01110
+ 01111 | 01111
+ 10000 | 10000
+-------------------
+Optimizing FSM <Inst_vpx_brd_ctrl_core/Inst_i_reset/reset_st/FSM> on signal <reset_st[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+INFO:Xst:2261 - The FF/Latch <dspa_bm_gpio_0> in Unit <Inst_vpx_brd_ctrl_core> is equivalent to the following 4 FFs/Latches, which will be removed : <dspa_bm_gpio_1> <dspa_bm_gpio_3> <dspa_bm_gpio_5> <dspa_bm_gpio_11> 
+INFO:Xst:2261 - The FF/Latch <dspa_bm_gpio_2> in Unit <Inst_vpx_brd_ctrl_core> is equivalent to the following 10 FFs/Latches, which will be removed : <dspa_bm_gpio_4> <dspa_bm_gpio_6> <dspa_bm_gpio_7> <dspa_bm_gpio_8> <dspa_bm_gpio_9> <dspa_bm_gpio_10> <dspa_bm_gpio_12> <dspa_bm_gpio_13> <dspa_bm_gpio_14> <dspa_bm_gpio_15> 
+WARNING:Xst:1710 - FF/Latch <dspa_bm_gpio_2> (without init value) has a constant value of 0 in block <Inst_vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <dspa_bm_gpio<15:12>> (without init value) have a constant value of 0 in block <vpx_brd_ctrl_core>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 6
+# ROMs                                                 : 2
+ 70x24-bit ROM                                         : 2
+# Adders/Subtractors                                   : 12
+ 16-bit adder                                          : 5
+ 24-bit adder                                          : 3
+ 5-bit subtractor                                      : 2
+ 7-bit adder                                           : 2
+# Counters                                             : 7
+ 16-bit up counter                                     : 4
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 595
+ Flip-Flops                                            : 595
+# Latches                                              : 2
+ 8-bit latch                                           : 2
+# Comparators                                          : 17
+ 16-bit comparator greatequal                          : 7
+ 16-bit comparator less                                : 2
+ 24-bit comparator greatequal                          : 8
+# Multiplexers                                         : 2
+ 1-bit 24-to-1 multiplexer                             : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <dspa_bm_gpio_2> (without init value) has a constant value of 0 in block <vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dspa_bm_gpio_4> (without init value) has a constant value of 0 in block <vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dspa_bm_gpio_6> (without init value) has a constant value of 0 in block <vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dspa_bm_gpio_7> (without init value) has a constant value of 0 in block <vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dspa_bm_gpio_8> (without init value) has a constant value of 0 in block <vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dspa_bm_gpio_9> (without init value) has a constant value of 0 in block <vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dspa_bm_gpio_10> (without init value) has a constant value of 0 in block <vpx_brd_ctrl_core>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <dspa_bm_gpio_0> in Unit <vpx_brd_ctrl_core> is equivalent to the following 4 FFs/Latches, which will be removed : <dspa_bm_gpio_1> <dspa_bm_gpio_3> <dspa_bm_gpio_5> <dspa_bm_gpio_11> 
+WARNING:Xst:1710 - FF/Latch <data_temp_18> (without init value) has a constant value of 0 in block <ad9516_a>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_19> (without init value) has a constant value of 0 in block <ad9516_a>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_20> (without init value) has a constant value of 0 in block <ad9516_a>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_21> (without init value) has a constant value of 0 in block <ad9516_a>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_22> (without init value) has a constant value of 0 in block <ad9516_a>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_23> (without init value) has a constant value of 0 in block <ad9516_a>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <data_temp_18> (without init value) has a constant value of 0 in block <ad9516_b>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_19> (without init value) has a constant value of 0 in block <ad9516_b>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_20> (without init value) has a constant value of 0 in block <ad9516_b>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_21> (without init value) has a constant value of 0 in block <ad9516_b>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_22> (without init value) has a constant value of 0 in block <ad9516_b>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_temp_23> (without init value) has a constant value of 0 in block <ad9516_b>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <VPX_BRD_SP3AN_CTRL> ...
+
+Optimizing unit <vpx_brd_ctrl_pad> ...
+
+Optimizing unit <fpga_internal_reset> ...
+
+Optimizing unit <dsp_spi> ...
+
+Optimizing unit <debouncer> ...
+
+Optimizing unit <reset_req_s> ...
+
+Optimizing unit <i2c_wr> ...
+WARNING:Xst:1710 - FF/Latch <head_buf_0> (without init value) has a constant value of 0 in block <i2c_wr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <head_buf_0> (without init value) has a constant value of 0 in block <i2c_wr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <head_buf_0> (without init value) has a constant value of 0 in block <i2c_wr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <head_buf_0> (without init value) has a constant value of 0 in block <i2c_wr>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <CLK_DCM> ...
+
+Optimizing unit <ad9516_a> ...
+
+Optimizing unit <ad9516_b> ...
+
+Optimizing unit <CPS1432_eeprom_init> ...
+
+Optimizing unit <vpx_brd_ctrl_core> ...
+WARNING:Xst:2677 - Node <data_w_6> of sequential type is unconnected in block <Inst_dspb_spi>.
+WARNING:Xst:2677 - Node <data_w_7> of sequential type is unconnected in block <Inst_dspb_spi>.
+WARNING:Xst:2677 - Node <data_w_5> of sequential type is unconnected in block <Inst_dspb_spi>.
+WARNING:Xst:2677 - Node <data_w_4> of sequential type is unconnected in block <Inst_dspb_spi>.
+WARNING:Xst:2677 - Node <data_w_6> of sequential type is unconnected in block <Inst_dspa_spi>.
+WARNING:Xst:2677 - Node <data_w_7> of sequential type is unconnected in block <Inst_dspa_spi>.
+WARNING:Xst:2677 - Node <data_w_5> of sequential type is unconnected in block <Inst_dspa_spi>.
+WARNING:Xst:2677 - Node <data_w_4> of sequential type is unconnected in block <Inst_dspa_spi>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block VPX_BRD_SP3AN_CTRL, actual ratio is 26.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 702
+ Flip-Flops                                            : 702
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : VPX_BRD_SP3AN_CTRL.ngr
+Top Level Output File Name         : VPX_BRD_SP3AN_CTRL
+Output Format                      : NGC
+Optimization Goal                  : Area
+Keep Hierarchy                     : Yes
+
+Design Statistics
+# IOs                              : 178
+
+Cell Usage :
+# BELS                             : 2433
+#      GND                         : 13
+#      INV                         : 73
+#      LUT1                        : 186
+#      LUT2                        : 233
+#      LUT3                        : 332
+#      LUT4                        : 815
+#      MUXCY                       : 372
+#      MUXF5                       : 138
+#      MUXF6                       : 6
+#      MUXF7                       : 2
+#      OR2                         : 1
+#      OR3                         : 1
+#      VCC                         : 11
+#      XORCY                       : 250
+# FlipFlops/Latches                : 718
+#      FD                          : 4
+#      FDC                         : 449
+#      FDC_1                       : 15
+#      FDCE                        : 53
+#      FDE                         : 67
+#      FDE_1                       : 24
+#      FDP                         : 83
+#      FDPE                        : 6
+#      FDS                         : 1
+#      LDC                         : 16
+# Clock Buffers                    : 6
+#      BUFG                        : 6
+# IO Buffers                       : 178
+#      IBUF                        : 44
+#      IBUFG                       : 1
+#      IOBUF                       : 33
+#      OBUF                        : 98
+#      OBUFT                       : 2
+# DCMs                             : 2
+#      DCM_SP                      : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400anfgg400-5 
+
+ Number of Slices:                      922  out of   3584    25%  
+ Number of Slice Flip Flops:            718  out of   7168    10%  
+ Number of 4 input LUTs:               1639  out of   7168    22%  
+ Number of IOs:                         178
+ Number of bonded IOBs:                 177  out of    311    56%  
+ Number of GCLKs:                         6  out of     24    25%  
+ Number of DCMs:                          2  out of      4    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+Clock Signal                                                              | Clock buffer(FF name)                                        | Load  |
+--------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+SP3AN_GCLK                                                                | DCM_SP_INST1:CLKDV                                           | 336   |
+Inst_vpx_brd_ctrl_pad/dspa_sspck_i1(Inst_vpx_brd_ctrl_pad/dspa_sspck_i1:O)| BUFG(*)(Inst_vpx_brd_ctrl_core/dspa_gpio_0)                  | 83    |
+Inst_vpx_brd_ctrl_core/dspa_tsip0_clka0_o                                 | NONE(Inst_vpx_brd_ctrl_core/dspa_tsip0_fsa0_o)               | 9     |
+SP3AN_GCLK                                                                | DCM_SP_INST1:CLKDV+DCM_SP_INST2:CLKDV                        | 238   |
+Inst_vpx_brd_ctrl_core/Inst_dspb_spi/rdy                                  | NONE(Inst_vpx_brd_ctrl_core/dspb_spi_r_0)                    | 8     |
+Inst_vpx_brd_ctrl_core/Inst_dspa_spi/rdy                                  | NONE(Inst_vpx_brd_ctrl_core/dspa_spi_r_0)                    | 8     |
+Inst_vpx_brd_ctrl_pad/dspb_sspck_i1(Inst_vpx_brd_ctrl_pad/dspb_sspck_i1:O)| BUFG(*)(Inst_vpx_brd_ctrl_core/Inst_dspb_spi/wr_event_cng)   | 20    |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_4/debounce_clk                      | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_4/signal_sample_1)| 4     |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_3/debounce_clk                      | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_3/signal_sample_1)| 4     |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_2/debounce_clk                      | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_2/signal_sample_1)| 4     |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_1/debounce_clk                      | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_1/signal_sample_1)| 4     |
+--------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                           | Buffer(FF name)                                                          | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+Inst_vpx_brd_ctrl_core/CPS1432_eeprom_init_inst_not0000(Inst_vpx_brd_ctrl_core/PW_SM_FSM_Acst_FSM_inv1_INV_0:O)                                                                          | NONE(Inst_vpx_brd_ctrl_core/CPS1432_eeprom_init_inst/DATA_0)             | 338   |
+Inst_vpx_brd_ctrl_core/Inst_ad9516_a/cnt_bit_Acst_inv(Inst_vpx_brd_ctrl_core/Inst_ad9516_a/cnt_bit_Acst_inv1_INV_0:O)                                                                    | NONE(Inst_vpx_brd_ctrl_core/Inst_ad9516_a/AD9516_LD_0)                   | 39    |
+Inst_vpx_brd_ctrl_core/Inst_ad9516_b/cnt_bit_Acst_inv(Inst_vpx_brd_ctrl_core/Inst_ad9516_b/cnt_bit_Acst_inv1_INV_0:O)                                                                    | NONE(Inst_vpx_brd_ctrl_core/Inst_ad9516_b/AD9516_LD_0)                   | 39    |
+Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_a/reset_st_FSM_Acst_FSM_inv(Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_a/reset_st_FSM_Acst_FSM_inv1_INV_0:O)                                  | NONE(Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_a/delay_timing_counter_0)| 31    |
+Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/reset_st_FSM_Acst_FSM_inv(Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/reset_st_FSM_Acst_FSM_inv1_INV_0:O)                                  | NONE(Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/delay_timing_counter_0)| 31    |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_1/reset_z_inv(Inst_vpx_brd_ctrl_core/Inst_debouncer_1/reset_z_inv1_INV_0:O)                                                                        | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_1/clk_c_0)                    | 22    |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_2/reset_z_inv(Inst_vpx_brd_ctrl_core/Inst_debouncer_2/reset_z_inv1_INV_0:O)                                                                        | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_2/clk_c_0)                    | 22    |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_3/reset_z_inv(Inst_vpx_brd_ctrl_core/Inst_debouncer_3/reset_z_inv1_INV_0:O)                                                                        | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_3/clk_c_0)                    | 22    |
+Inst_vpx_brd_ctrl_core/Inst_debouncer_4/reset_z_inv(Inst_vpx_brd_ctrl_core/Inst_debouncer_4/reset_z_inv1_INV_0:O)                                                                        | NONE(Inst_vpx_brd_ctrl_core/Inst_debouncer_4/clk_c_0)                    | 22    |
+Inst_vpx_brd_ctrl_core/CPS1432_eeprom_init_inst/i2c_wr_inst/main_state_FSM_Acst_FSM_inv(Inst_vpx_brd_ctrl_core/CPS1432_eeprom_init_inst/i2c_wr_inst/main_state_FSM_Acst_FSM_inv1_INV_0:O)| NONE(Inst_vpx_brd_ctrl_core/CPS1432_eeprom_init_inst/i2c_wr_inst/ack)    | 21    |
+Inst_vpx_brd_ctrl_core/Inst_i_reset/reset_st_FSM_Acst_FSM_inv(Inst_vpx_brd_ctrl_core/Inst_i_reset/reset_st_FSM_Acst_FSM_inv1_INV_0:O)                                                    | NONE(Inst_vpx_brd_ctrl_core/Inst_i_reset/fpga_reset_counter_0)           | 19    |
+Inst_vpx_brd_ctrl_pad/dspa_sspcs1_i(Inst_vpx_brd_ctrl_pad/dspa_sspcs1_i1:O)                                                                                                              | NONE(Inst_vpx_brd_ctrl_core/Inst_dspa_spi/DSP_MISO1)                     | 8     |
+Inst_vpx_brd_ctrl_pad/dspb_sspcs1_i(Inst_vpx_brd_ctrl_pad/dspb_sspcs1_i1:O)                                                                                                              | NONE(Inst_vpx_brd_ctrl_core/Inst_dspb_spi/DSP_MISO1)                     | 8     |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.753ns (Maximum Frequency: 128.979MHz)
+   Minimum input arrival time before clock: 5.499ns
+   Maximum output required time after clock: 10.440ns
+   Maximum combinational path delay: 8.700ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SP3AN_GCLK'
+  Clock period: 0.556ns (frequency: 1798.823MHz)
+  Total number of paths / destination ports: 29228 / 649
+-------------------------------------------------------------------------
+Delay:               8.895ns (Levels of Logic = 8)
+  Source:            Inst_vpx_brd_ctrl_core/PW_SM_FSM_FFd1 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/delay_timing_counter_0 (FF)
+  Source Clock:      SP3AN_GCLK rising 0.1X
+  Destination Clock: SP3AN_GCLK rising 0.1X
+
+  Data Path: Inst_vpx_brd_ctrl_core/PW_SM_FSM_FFd1 to Inst_vpx_brd_ctrl_core/Inst_reset_req_ctrl_b/delay_timing_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             47   0.495   1.185  PW_SM_FSM_FFd1 (PW_SM_FSM_FFd1)
+     LUT3:I0->O            4   0.561   0.565  dspb_resetz_o_or00011 (dspb_resetz_o_or0001)
+     LUT4:I1->O           10   0.562   0.773  dspb_resetfullz_o1 (dspb_resetfullz_o)
+     begin scope: 'Inst_reset_req_ctrl_b'
+     LUT3:I2->O            2   0.561   0.488  delay_timing_counter_mux0000<0>155 (delay_timing_counter_mux0000<0>155)
+     LUT4:I0->O            1   0.561   0.000  delay_timing_counter_mux0000<0>157_G (N19)
+     MUXF5:I1->O           1   0.229   0.465  delay_timing_counter_mux0000<0>157 (delay_timing_counter_mux0000<0>157)
+     LUT3:I0->O           24   0.561   1.130  delay_timing_counter_mux0000<0>170 (N01)
+     LUT4:I1->O            1   0.562   0.000  delay_timing_counter_mux0000<9>1 (delay_timing_counter_mux0000<9>)
+     FDC:D                     0.197          delay_timing_counter_14
+    ----------------------------------------
+    Total                      8.895ns (4.289ns logic, 4.606ns route)
+                                       (48.2% logic, 51.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_vpx_brd_ctrl_core/dspa_tsip0_clka0_o'
+  Clock period: 4.269ns (frequency: 234.250MHz)
+  Total number of paths / destination ports: 108 / 9
+-------------------------------------------------------------------------
+Delay:               4.269ns (Levels of Logic = 9)
+  Source:            Inst_vpx_brd_ctrl_core/fs_cnt_1 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/fs_cnt_7 (FF)
+  Source Clock:      Inst_vpx_brd_ctrl_core/dspa_tsip0_clka0_o rising
+  Destination Clock: Inst_vpx_brd_ctrl_core/dspa_tsip0_clka0_o rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/fs_cnt_1 to Inst_vpx_brd_ctrl_core/fs_cnt_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.495   0.488  fs_cnt_1 (fs_cnt_1)
+     LUT1:I0->O            1   0.561   0.000  Mcount_fs_cnt_cy<1>_rt (Mcount_fs_cnt_cy<1>_rt)
+     MUXCY:S->O            1   0.523   0.000  Mcount_fs_cnt_cy<1> (Mcount_fs_cnt_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_fs_cnt_cy<2> (Mcount_fs_cnt_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_fs_cnt_cy<3> (Mcount_fs_cnt_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_fs_cnt_cy<4> (Mcount_fs_cnt_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_fs_cnt_cy<5> (Mcount_fs_cnt_cy<5>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_fs_cnt_cy<6> (Mcount_fs_cnt_cy<6>)
+     XORCY:CI->O           1   0.654   0.465  Mcount_fs_cnt_xor<7> (Result<7>)
+     LUT3:I0->O            1   0.561   0.000  Mcount_fs_cnt_eqn_71 (Mcount_fs_cnt_eqn_7)
+     FDC:D                     0.197          fs_cnt_7
+    ----------------------------------------
+    Total                      4.269ns (3.316ns logic, 0.953ns route)
+                                       (77.7% logic, 22.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_vpx_brd_ctrl_pad/dspa_sspck_i1'
+  Clock period: 7.753ns (frequency: 128.979MHz)
+  Total number of paths / destination ports: 209 / 34
+-------------------------------------------------------------------------
+Delay:               3.877ns (Levels of Logic = 4)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_dspa_spi/spi_c_FSM_FFd3 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_dspa_spi/DSP_MISO1 (FF)
+  Source Clock:      Inst_vpx_brd_ctrl_pad/dspa_sspck_i1 falling
+  Destination Clock: Inst_vpx_brd_ctrl_pad/dspa_sspck_i1 rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_dspa_spi/spi_c_FSM_FFd3 to Inst_vpx_brd_ctrl_core/Inst_dspa_spi/DSP_MISO1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           31   0.495   1.181  spi_c_FSM_FFd3 (spi_c_FSM_FFd3)
+     LUT4:I0->O            1   0.561   0.000  DSP_MISO1_mux000035_F (N29)
+     MUXF5:I0->O           1   0.229   0.423  DSP_MISO1_mux000035 (DSP_MISO1_mux000035)
+     LUT4:I1->O            1   0.562   0.000  DSP_MISO1_mux00001621 (DSP_MISO1_mux0000162)
+     MUXF5:I1->O           1   0.229   0.000  DSP_MISO1_mux0000162_f5 (DSP_MISO1_mux0000)
+     FDC:D                     0.197          DSP_MISO1
+    ----------------------------------------
+    Total                      3.877ns (2.273ns logic, 1.604ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_vpx_brd_ctrl_pad/dspb_sspck_i1'
+  Clock period: 7.753ns (frequency: 128.979MHz)
+  Total number of paths / destination ports: 195 / 20
+-------------------------------------------------------------------------
+Delay:               3.877ns (Levels of Logic = 4)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_dspb_spi/spi_c_FSM_FFd3 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_dspb_spi/DSP_MISO1 (FF)
+  Source Clock:      Inst_vpx_brd_ctrl_pad/dspb_sspck_i1 falling
+  Destination Clock: Inst_vpx_brd_ctrl_pad/dspb_sspck_i1 rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_dspb_spi/spi_c_FSM_FFd3 to Inst_vpx_brd_ctrl_core/Inst_dspb_spi/DSP_MISO1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           31   0.495   1.181  spi_c_FSM_FFd3 (spi_c_FSM_FFd3)
+     LUT4:I0->O            1   0.561   0.000  DSP_MISO1_mux000035_F (N29)
+     MUXF5:I0->O           1   0.229   0.423  DSP_MISO1_mux000035 (DSP_MISO1_mux000035)
+     LUT4:I1->O            1   0.562   0.000  DSP_MISO1_mux00001621 (DSP_MISO1_mux0000162)
+     MUXF5:I1->O           1   0.229   0.000  DSP_MISO1_mux0000162_f5 (DSP_MISO1_mux0000)
+     FDC:D                     0.197          DSP_MISO1
+    ----------------------------------------
+    Total                      3.877ns (2.273ns logic, 1.604ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_4/debounce_clk'
+  Clock period: 1.143ns (frequency: 874.623MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.143ns (Levels of Logic = 0)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_debouncer_4/signal_sample_2 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_4/signal_sample_3 (FF)
+  Source Clock:      Inst_vpx_brd_ctrl_core/Inst_debouncer_4/debounce_clk rising
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_4/debounce_clk rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_debouncer_4/signal_sample_2 to Inst_vpx_brd_ctrl_core/Inst_debouncer_4/signal_sample_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.495   0.451  signal_sample_2 (signal_sample_2)
+     FDP:D                     0.197          signal_sample_3
+    ----------------------------------------
+    Total                      1.143ns (0.692ns logic, 0.451ns route)
+                                       (60.5% logic, 39.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_3/debounce_clk'
+  Clock period: 1.143ns (frequency: 874.623MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.143ns (Levels of Logic = 0)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_debouncer_3/signal_sample_2 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_3/signal_sample_3 (FF)
+  Source Clock:      Inst_vpx_brd_ctrl_core/Inst_debouncer_3/debounce_clk rising
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_3/debounce_clk rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_debouncer_3/signal_sample_2 to Inst_vpx_brd_ctrl_core/Inst_debouncer_3/signal_sample_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.495   0.451  signal_sample_2 (signal_sample_2)
+     FDP:D                     0.197          signal_sample_3
+    ----------------------------------------
+    Total                      1.143ns (0.692ns logic, 0.451ns route)
+                                       (60.5% logic, 39.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_2/debounce_clk'
+  Clock period: 1.143ns (frequency: 874.623MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.143ns (Levels of Logic = 0)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_debouncer_2/signal_sample_2 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_2/signal_sample_3 (FF)
+  Source Clock:      Inst_vpx_brd_ctrl_core/Inst_debouncer_2/debounce_clk rising
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_2/debounce_clk rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_debouncer_2/signal_sample_2 to Inst_vpx_brd_ctrl_core/Inst_debouncer_2/signal_sample_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.495   0.451  signal_sample_2 (signal_sample_2)
+     FDP:D                     0.197          signal_sample_3
+    ----------------------------------------
+    Total                      1.143ns (0.692ns logic, 0.451ns route)
+                                       (60.5% logic, 39.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_1/debounce_clk'
+  Clock period: 1.143ns (frequency: 874.623MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.143ns (Levels of Logic = 0)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_debouncer_1/signal_sample_2 (FF)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_1/signal_sample_3 (FF)
+  Source Clock:      Inst_vpx_brd_ctrl_core/Inst_debouncer_1/debounce_clk rising
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_1/debounce_clk rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_debouncer_1/signal_sample_2 to Inst_vpx_brd_ctrl_core/Inst_debouncer_1/signal_sample_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.495   0.451  signal_sample_2 (signal_sample_2)
+     FDP:D                     0.197          signal_sample_3
+    ----------------------------------------
+    Total                      1.143ns (0.692ns logic, 0.451ns route)
+                                       (60.5% logic, 39.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SP3AN_GCLK'
+  Total number of paths / destination ports: 28 / 28
+-------------------------------------------------------------------------
+Offset:              2.006ns (Levels of Logic = 4)
+  Source:            DSPA_RESETSTAT_N (PAD)
+  Destination:       Inst_vpx_brd_ctrl_core/dspa_resetstat_n_50s1 (FF)
+  Destination Clock: SP3AN_GCLK rising 0.1X
+
+  Data Path: DSPA_RESETSTAT_N to Inst_vpx_brd_ctrl_core/dspa_resetstat_n_50s1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  DSPA_RESETSTAT_N_IBUF (DSPA_RESETSTAT_N_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            6   0.562   0.000  dspa_resetstat_n_i1 (dspa_resetstat_n_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     FDP:D                     0.197          dspa_resetstat_n_50s1
+    ----------------------------------------
+    Total                      2.006ns (1.583ns logic, 0.423ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_vpx_brd_ctrl_pad/dspa_sspck_i1'
+  Total number of paths / destination ports: 43 / 40
+-------------------------------------------------------------------------
+Offset:              5.499ns (Levels of Logic = 7)
+  Source:            DSPA_SSPMOSI (PAD)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_dspa_spi/rw (FF)
+  Destination Clock: Inst_vpx_brd_ctrl_pad/dspa_sspck_i1 falling
+
+  Data Path: DSPA_SSPMOSI to Inst_vpx_brd_ctrl_core/Inst_dspa_spi/rw
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  DSPA_SSPMOSI_IBUF (DSPA_SSPMOSI_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            6   0.562   0.677  dspa_sspmosi_i1 (dspa_sspmosi_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_dspa_spi'
+     LUT3:I0->O            7   0.561   0.710  addr_1_mux000011 (N18)
+     LUT4:I0->O            1   0.561   0.423  rw_mux000019 (rw_mux000019)
+     LUT2:I1->O            1   0.562   0.000  rw_mux000020 (rw_mux0000)
+     FDE_1:D                   0.197          rw
+    ----------------------------------------
+    Total                      5.499ns (3.267ns logic, 2.232ns route)
+                                       (59.4% logic, 40.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_vpx_brd_ctrl_pad/dspb_sspck_i1'
+  Total number of paths / destination ports: 27 / 24
+-------------------------------------------------------------------------
+Offset:              5.499ns (Levels of Logic = 7)
+  Source:            DSPB_SSPMOSI (PAD)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_dspb_spi/rw (FF)
+  Destination Clock: Inst_vpx_brd_ctrl_pad/dspb_sspck_i1 falling
+
+  Data Path: DSPB_SSPMOSI to Inst_vpx_brd_ctrl_core/Inst_dspb_spi/rw
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  DSPB_SSPMOSI_IBUF (DSPB_SSPMOSI_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            6   0.562   0.677  dspb_sspmosi_i1 (dspb_sspmosi_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_dspb_spi'
+     LUT3:I0->O            7   0.561   0.710  addr_1_mux000011 (N18)
+     LUT4:I0->O            1   0.561   0.423  rw_mux000019 (rw_mux000019)
+     LUT2:I1->O            1   0.562   0.000  rw_mux000020 (rw_mux0000)
+     FDE_1:D                   0.197          rw
+    ----------------------------------------
+    Total                      5.499ns (3.267ns logic, 2.232ns route)
+                                       (59.4% logic, 40.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_4/debounce_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.006ns (Levels of Logic = 4)
+  Source:            V7_RST (PAD)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_4/signal_sample_1 (FF)
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_4/debounce_clk rising
+
+  Data Path: V7_RST to Inst_vpx_brd_ctrl_core/Inst_debouncer_4/signal_sample_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  V7_RST_IBUF (V7_RST_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            2   0.562   0.000  fpga_rst_i1 (fpga_rst_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_debouncer_4'
+     FDP:D                     0.197          signal_sample_1
+    ----------------------------------------
+    Total                      2.006ns (1.583ns logic, 0.423ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_3/debounce_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.006ns (Levels of Logic = 4)
+  Source:            DSPB_WARM_RST (PAD)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_3/signal_sample_1 (FF)
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_3/debounce_clk rising
+
+  Data Path: DSPB_WARM_RST to Inst_vpx_brd_ctrl_core/Inst_debouncer_3/signal_sample_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  DSPB_WARM_RST_IBUF (DSPB_WARM_RST_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            2   0.562   0.000  dspb_warm_reset_i1 (dspb_warm_reset_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_debouncer_3'
+     FDP:D                     0.197          signal_sample_1
+    ----------------------------------------
+    Total                      2.006ns (1.583ns logic, 0.423ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_2/debounce_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.006ns (Levels of Logic = 4)
+  Source:            DSPA_WARM_RST (PAD)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_2/signal_sample_1 (FF)
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_2/debounce_clk rising
+
+  Data Path: DSPA_WARM_RST to Inst_vpx_brd_ctrl_core/Inst_debouncer_2/signal_sample_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  DSPA_WARM_RST_IBUF (DSPA_WARM_RST_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            2   0.562   0.000  dspa_warm_reset_i1 (dspa_warm_reset_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_debouncer_2'
+     FDP:D                     0.197          signal_sample_1
+    ----------------------------------------
+    Total                      2.006ns (1.583ns logic, 0.423ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Inst_vpx_brd_ctrl_core/Inst_debouncer_1/debounce_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.006ns (Levels of Logic = 4)
+  Source:            FULL_RST (PAD)
+  Destination:       Inst_vpx_brd_ctrl_core/Inst_debouncer_1/signal_sample_1 (FF)
+  Destination Clock: Inst_vpx_brd_ctrl_core/Inst_debouncer_1/debounce_clk rising
+
+  Data Path: FULL_RST to Inst_vpx_brd_ctrl_core/Inst_debouncer_1/signal_sample_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  FULL_RST_IBUF (FULL_RST_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            2   0.562   0.000  full_reset_i1 (full_reset_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_debouncer_1'
+     FDP:D                     0.197          signal_sample_1
+    ----------------------------------------
+    Total                      2.006ns (1.583ns logic, 0.423ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SP3AN_GCLK'
+  Total number of paths / destination ports: 345 / 104
+-------------------------------------------------------------------------
+Offset:              10.440ns (Levels of Logic = 7)
+  Source:            Inst_vpx_brd_ctrl_core/PW_SM_FSM_FFd1 (FF)
+  Destination:       DSPB_PHY_RST (PAD)
+  Source Clock:      SP3AN_GCLK rising 0.1X
+
+  Data Path: Inst_vpx_brd_ctrl_core/PW_SM_FSM_FFd1 to DSPB_PHY_RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             47   0.495   1.185  PW_SM_FSM_FFd1 (PW_SM_FSM_FFd1)
+     LUT3:I0->O            4   0.561   0.565  dspb_resetz_o_or00011 (dspb_resetz_o_or0001)
+     LUT4:I1->O           10   0.562   0.773  dspb_resetfullz_o1 (dspb_resetfullz_o)
+     LUT3:I2->O            1   0.561   0.423  dspb_phy_rst_n_o1 (dspb_phy_rst_n_o)
+     end scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            1   0.562   0.357  DSPB_PHY_RST1 (DSPB_PHY_RST)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     OBUF:I->O                 4.396          DSPB_PHY_RST_OBUF (DSPB_PHY_RST)
+    ----------------------------------------
+    Total                     10.440ns (7.137ns logic, 3.303ns route)
+                                       (68.4% logic, 31.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_vpx_brd_ctrl_core/dspa_tsip0_clka0_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              6.256ns (Levels of Logic = 4)
+  Source:            Inst_vpx_brd_ctrl_core/dspa_tsip0_fsa0_o (FF)
+  Destination:       DSPA_TSIP0_FSA0 (PAD)
+  Source Clock:      Inst_vpx_brd_ctrl_core/dspa_tsip0_clka0_o rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/dspa_tsip0_fsa0_o to DSPA_TSIP0_FSA0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.495   0.446  dspa_tsip0_fsa0_o (dspa_tsip0_fsa0_o)
+     end scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            1   0.562   0.357  DSPA_TSIP0_FSA01 (DSPA_TSIP0_FSA0)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     OBUF:I->O                 4.396          DSPA_TSIP0_FSA0_OBUF (DSPA_TSIP0_FSA0)
+    ----------------------------------------
+    Total                      6.256ns (5.453ns logic, 0.803ns route)
+                                       (87.2% logic, 12.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_vpx_brd_ctrl_pad/dspb_sspck_i1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.256ns (Levels of Logic = 4)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_dspb_spi/DSP_MISO1 (FF)
+  Destination:       DSPB_SSPMISO (PAD)
+  Source Clock:      Inst_vpx_brd_ctrl_pad/dspb_sspck_i1 rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_dspb_spi/DSP_MISO1 to DSPB_SSPMISO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.495   0.446  DSP_MISO1 (DSP_MISO1)
+     end scope: 'Inst_dspb_spi'
+     end scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            1   0.562   0.357  DSPB_SSPMISO_mux00001 (DSPB_SSPMISO_mux0000)
+     OBUFT:I->O                4.396          DSPB_SSPMISO_OBUFT (DSPB_SSPMISO)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+    ----------------------------------------
+    Total                      6.256ns (5.453ns logic, 0.803ns route)
+                                       (87.2% logic, 12.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_vpx_brd_ctrl_pad/dspa_sspck_i1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.256ns (Levels of Logic = 4)
+  Source:            Inst_vpx_brd_ctrl_core/Inst_dspa_spi/DSP_MISO1 (FF)
+  Destination:       DSPA_SSPMISO (PAD)
+  Source Clock:      Inst_vpx_brd_ctrl_pad/dspa_sspck_i1 rising
+
+  Data Path: Inst_vpx_brd_ctrl_core/Inst_dspa_spi/DSP_MISO1 to DSPA_SSPMISO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.495   0.446  DSP_MISO1 (DSP_MISO1)
+     end scope: 'Inst_dspa_spi'
+     end scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            1   0.562   0.357  DSPA_SSPMISO_mux00001 (DSPA_SSPMISO_mux0000)
+     OBUFT:I->O                4.396          DSPA_SSPMISO_OBUFT (DSPA_SSPMISO)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+    ----------------------------------------
+    Total                      6.256ns (5.453ns logic, 0.803ns route)
+                                       (87.2% logic, 12.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               8.700ns (Levels of Logic = 8)
+  Source:            DSPB_RESETSTAT_N (PAD)
+  Destination:       DSPB_NAND_WP (PAD)
+
+  Data Path: DSPB_RESETSTAT_N to DSPB_NAND_WP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  DSPB_RESETSTAT_N_IBUF (DSPB_RESETSTAT_N_IBUF)
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            6   0.562   0.592  dspb_resetstat_n_i1 (dspb_resetstat_n_i)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     begin scope: 'Inst_vpx_brd_ctrl_core'
+     LUT4:I2->O            1   0.561   0.423  dspb_nor_wp_n_o1 (dspb_nor_wp_n_o)
+     end scope: 'Inst_vpx_brd_ctrl_core'
+     begin scope: 'Inst_vpx_brd_ctrl_pad'
+     LUT2:I1->O            1   0.562   0.357  DSPB_NOR_WP1 (DSPB_NOR_WP)
+     end scope: 'Inst_vpx_brd_ctrl_pad'
+     OBUF:I->O                 4.396          DSPB_NOR_WP_OBUF (DSPB_NOR_WP)
+    ----------------------------------------
+    Total                      8.700ns (6.905ns logic, 1.795ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.75 secs
+ 
+--> 
+
+Total memory usage is 319396 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   59 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init_test_isim_beh.exe" -prj "D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/CPS1432_eeprom_init_test_beh.prj" "work.CPS1432_eeprom_init_test" "work.glbl" 

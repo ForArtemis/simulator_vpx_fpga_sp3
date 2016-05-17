@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj VPX_BRD_SP3AN_CTRL -o D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL/i2c_wr.tfi -lib work D:/lrh_workspace/projects/simulator_new/fpga_projects/VPX_BRD_SP3AN_CTRL//i2c_wr.v -module i2c_wr -template D:/Xilinx/14.3/ISE_DS/ISE//data/tfi.tft -deleteonerror 
